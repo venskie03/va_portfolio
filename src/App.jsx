@@ -167,8 +167,8 @@ function App() {
           alt="Background image"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 w-full h-full bg-gray-950 bg-cover bg-center opacity-50"></div>
-        <h1 className="lg:text-4xl text-xl text-center font-bold text-gray-100 z-10">
+        <div className="absolute inset-0 w-full h-full bg-gray-950 bg-cover bg-center opacity-75"></div>
+        <h1 className="lg:text-4xl text-2xl text-center font-bold text-gray-100 z-10">
           I'll be your own Personal Virtual Assistant!
         </h1>
         <p className="lg:text-lg text-md text-gray-50 mt-4 text-center max-w-2xl z-10">
@@ -181,7 +181,7 @@ function App() {
           smooth={true}
           offset={100}
           duration={500}
-          className="mt-6 hover:cursor-pointer md:px-6 px-3 py-3 bg-gray-950 border-2 border-white text-white lg:font-bold font-semibold rounded-lg hover:text-[#3bd6c6] hover:border-[#3bd6c6] transition duration-200 z-10 flex items-center space-x-2"
+          className="mt-6 hover:cursor-pointer mb-20 md:px-6 px-3 py-3 bg-gray-950 border-2 border-white text-white lg:font-bold font-semibold rounded-lg hover:text-[#3bd6c6] hover:border-[#3bd6c6] transition duration-200 z-10 flex items-center space-x-2"
         >
           <span>Connect with me now!</span>
           <FaArrowRight className=" lg:text-lg" />
