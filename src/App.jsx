@@ -26,8 +26,63 @@ function App() {
     setIsOpen(false);
   };
 
+  const skills = [
+    {
+      icon: IoLaptopSharp,
+      title: "Administrative Support",
+      description:
+        "If you have daily tasks or administration work that keeping you busy, and you can't do the tasks that will make your business grow more.\n\nWell... it's time for you to get an extra helping hand to do it. I'm easy to be train and my attention to detail is superb.",
+    },
+    {
+      icon: IoChatbubbleEllipsesSharp,
+      title: "Social Media Management",
+      description:
+        "Keeping in touch with your customers, fans, colleagues or even strangers is not as hard as you think.\n\nIf you will hire me, I can manage your social media channels like Facebook, Instagram, and Linkedin and keep updates on what is happening in your business.",
+    },
+    {
+      icon: IoBriefcaseSharp,
+      title: "Customer Support",
+      description:
+        "With so many customers bugging you all day asking for refunds and cannot make successful transactions or can't even do simple tasks themselves to buy from the shopping cart, it's time to call for help.\n\nI have extraordinary patience to handle customer rage and emotions.",
+    },
+    {
+      icon: IoAnalyticsSharp,
+      title: "Data Analysis",
+      description:
+        "Collecting, organizing, and interpreting data to provide actionable insights, helping businesses grow strategically.",
+    },
+    {
+      icon: IoCreateSharp,
+      title: "Content Creation",
+      description:
+        "Crafting blogs, articles, and marketing materials to engage audiences and strengthen brand presence.",
+    },
+    {
+      icon: IoFileTrayStackedSharp,
+      title: "File and Document Management",
+      description:
+        "Organizing, categorizing, and maintaining digital and physical files to keep your operations running smoothly.",
+    },
+    {
+      icon: IoCodeWorkingSharp,
+      title: "Youtube Management",
+      description:
+        "If you are planning or you do already have an existing Youtube channel, you don't need to worry about the video editing anymore or adding descriptions, do the time-consuming graphic design and tagging. I can do that for you...\n\nIf you wish for someone to assist you in doing Youtube Livestream, I can be a great help managing your presentations and help you conduct live streams.",
+    },
+    {
+      icon: IoCashSharp,
+      title: "Content Management",
+      description:
+        "If you have a website like WordPress, Wix, or whatever you use. I can be the one who manages content for you so that people can read the latest update from you directly from your website.\n\nI can also manage the content from start to finish if you have a team and you do regularly publish content.",
+    },
+    {
+      icon: IoPeopleSharp,
+      title: "Personal Assistant",
+      description:
+        "I know you mean business, and just like everybody else in the industry, a personal assistant can be a great help for you. If you want to prepare some documents, marketing materials, or book your travel arrangement, I can be a great help to you.",
+    },
+  ];
   
-
   return (
     <div className="font-poppins w-full">
       {isOpen && (
@@ -230,96 +285,24 @@ function App() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-gray-100 p-5">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">My Skills</h2>
-          <p className="text-gray-600 mt-2">What I bring to the table</p>
-        </div>
-        <div className="flex flex-wrap justify-center gap-6 max-w-[80rem] mx-auto">
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoLaptopSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">
-              Administrative Support
-            </h3>
-            <p className="text-gray-600 mt-2">
-              From managing schedules and organizing calendars to data entry and
-              documentation, I ensure your administrative tasks are handled
-              efficiently.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoChatbubbleEllipsesSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">
-              Social Media Management
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Creating engaging posts, scheduling content, and analyzing metrics
-              to enhance your online presence and drive engagement.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoBriefcaseSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">Customer Support</h3>
-            <p className="text-gray-600 mt-2">
-              Resolving complaints, processing refunds, and answering inquiries
-              with patience and professionalism to ensure customer satisfaction.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoAnalyticsSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">Data Analysis</h3>
-            <p className="text-gray-600 mt-2">
-              Collecting, organizing, and interpreting data to provide
-              actionable insights, helping businesses grow strategically.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoCreateSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">Content Creation</h3>
-            <p className="text-gray-600 mt-2">
-              Crafting blogs, articles, and marketing materials to engage
-              audiences and strengthen brand presence.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoFileTrayStackedSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">
-              File and Document Management
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Organizing, categorizing, and maintaining digital and physical
-              files to keep your operations running smoothly.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoCodeWorkingSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">
-              Basic Website Management
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Updating website content, monitoring performance, and
-              troubleshooting basic issues to ensure a seamless online presence.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoCashSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">
-              Invoicing and Billing
-            </h3>
-            <p className="text-gray-600 mt-2">
-              Preparing and sending invoices, tracking payments, and maintaining
-              accurate financial records to streamline billing processes.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-5 rounded-lg text-center max-w-80 w-full">
-            <IoPeopleSharp className="text-4xl text-[#3bd6c6]" />
-            <h3 className="text-xl font-semibold mt-4">Team Coordination</h3>
-            <p className="text-gray-600 mt-2">
-              Facilitating communication, scheduling team meetings, and ensuring
-              alignment to keep projects moving efficiently.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="text-center mb-10">
+    <h2 className="text-3xl font-bold text-gray-900">My Skills</h2>
+    <p className="text-gray-600 mt-2">What I bring to the table</p>
+  </div>
+  <div className="flex flex-wrap justify-center gap-6 max-w-[80rem] mx-auto">
+    {skills.map((skill, index) => (
+      <div
+        key={index}
+        className="bg-white shadow-md p-5 rounded-lg md:text-start text-center max-w-96 w-full"
+      >
+        <skill.icon className="text-4xl text-[#3bd6c6]" />
+        <h3 className="text-xl font-semibold mt-4">{skill.title}</h3>
+        <p className="text-gray-600 mt-2">{skill.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 p-5">
