@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiFilm, FiCamera, FiEdit, FiMail, FiGithub, FiLinkedin, FiInstagram, FiMenu, FiX, FiArrowUp, FiArrowDown } from 'react-icons/fi';
 import { FaFacebook, FaTiktok, FaShopify, FaYoutube } from 'react-icons/fa';
+import { SiCanva } from "react-icons/si";
 
 const AdEditorPortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,10 +50,37 @@ const AdEditorPortfolio = () => {
     }
   ];
 
+const highTiktokSales = [
+  {
+    id: 1,
+    title: "Hanging Neck Fan",
+    description: "Stay cool anywhere with this wearable fan. Perfect for outdoor walks or workouts!",
+    image: "./tiktoklogo.jpeg",
+    video_url: "https://www.tiktok.com/@krazymegumin/video/7291871392591531270?is_from_webapp=1&sender_device=pc&web_id=7525895093074626056",
+  },
+  {
+    id: 2,
+    title: "Rice Storage Container",
+    description: "No more messy cabinets—this container keeps your rice fresh and easy to pour.",
+    image: "./tiktoklogo.jpeg",
+    video_url: "https://www.tiktok.com/@krazymegumin/video/7240240626682383621?is_from_webapp=1&sender_device=pc&web_id=7525895093074626056",
+  },
+  {
+    id: 3,
+    title: "Clip Electric Fan",
+    description: "Small but powerful—clip this fan anywhere for instant airflow and cooling comfort.",
+    image: "./tiktoklogo.jpeg",
+    video_url: "https://www.tiktok.com/@krazymegumin/video/7248516096980995333?is_from_webapp=1&sender_device=pc&web_id=7525895093074626056",
+  },
+];
+
+
+
   const skills = [
     { name: "Video Editing", icon: <FiFilm className="w-8 h-8" />, level: "95%" },
+    { name: "Canva Editing", icon: <SiCanva className="w-8 h-8" />, level: "94%" },
+      { name: "TikTok Ads", icon: <FaTiktok className="w-8 h-8" />, level: "92%" },
     { name: "Facebook Ads", icon: <FaFacebook className="w-8 h-8" />, level: "90%" },
-    { name: "TikTok Ads", icon: <FaTiktok className="w-8 h-8" />, level: "85%" },
     { name: "Shopify Ads", icon: <FaShopify className="w-8 h-8" />, level: "80%" }
   ];
 
@@ -192,7 +220,7 @@ const AdEditorPortfolio = () => {
               </div>
             </motion.div>
             <motion.div variants={item} className="relative mt-12 md:mt-0">
-              <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-xl border border-gray-700">
+              <div className="relative w-full h-64 md:h-96 rounded-xl shadow-md shadow-blue-500/20 overflow-hidden shadow-xl border border-gray-700">
                 <img 
                   src="./video-edit-setup1.jpg" 
                   alt="Video editing setup"
@@ -200,11 +228,11 @@ const AdEditorPortfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
+              <div className="absolute -bottom-6 -right-6 w-24 shadow-md shadow-blue-500/20 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
                 <img 
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
                   alt="Professional headshot"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                 />
               </div>
             </motion.div>
@@ -258,6 +286,60 @@ const AdEditorPortfolio = () => {
           </div>
         </div>
       </section>
+
+      {/* TikTok Ads Section */}
+<section id="tiktok-ads" className="py-20 px-4 bg-gray-800 border-t border-gray-700">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">Viral TikTok Ads</h2>
+      <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+        Scroll-stopping ads that drove real sales
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {highTiktokSales.map((project) => (
+        <motion.div
+          key={project.id}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-600 group"
+        >
+          <div className="relative h-48 md:h-56 overflow-hidden">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+              <a 
+                href={project.video_url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center transition-colors"
+              >
+                <FaTiktok className="mr-2" />
+                Watch Ad
+              </a>
+            </div>
+          </div>
+          <div className="p-6">
+            <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-100">{project.title}</h3>
+            <p className="text-gray-400 text-sm md:text-base">{project.description}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 bg-gray-900 border-t border-gray-800">
@@ -363,9 +445,9 @@ const AdEditorPortfolio = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { metric: "5M+", label: "Ad Views" },
+              { metric: "400k+", label: "Ad Views" },
               { metric: "300%", label: "Average ROAS" },
-              { metric: "$2M+", label: "Revenue Generated" }
+              { metric: "$40k+", label: "Revenue Generated" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
