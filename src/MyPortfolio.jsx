@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookMessenger, FaWhatsapp, FaEnvelope, FaPlay, FaTimes } from 'react-icons/fa';
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
+import { IoIosBriefcase } from "react-icons/io";
 
 // Sample data for projects
 const localizeVideo = [
@@ -462,7 +463,7 @@ const MyPortfolio = () => {
           </motion.div>
           
           {/* Image Projects */}
-          <motion.div 
+          {/* <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -508,7 +509,7 @@ const MyPortfolio = () => {
   </motion.div>
 ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
@@ -540,16 +541,21 @@ const MyPortfolio = () => {
                 Have a project in mind or want to discuss potential collaboration? Feel free to reach out through any of these channels.
               </p>
               
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaFacebookMessenger className="text-blue-500 text-xl" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Facebook Messenger</h4>
-                    <a href="https://m.me/yourprofile" className="text-blue-500 hover:underline">www.facebook.com/jazha.tijamo</a>
-                  </div>
-                </div>
+              <div className="space-y-6 w-full">
+             <div className="flex items-center ">
+  <div className="bg-blue-100 p-3 rounded-full mr-4">
+    <FaFacebookMessenger className="text-blue-500 text-xl" />
+  </div>
+  <div className="min-w-0"> {/* allows shrink inside flex */}
+    <h4 className="font-semibold">Facebook Messenger</h4>
+    <a
+      href="https://m.me/yourprofile"
+      className="text-blue-500 hover:underline break-words whitespace-normal"
+    >
+      www.facebook.com/jazha.tijamo
+    </a>
+  </div>
+</div>
                 
                 <div className="flex items-center">
                   <div className="bg-green-100 p-3 rounded-full mr-4">
@@ -561,15 +567,20 @@ const MyPortfolio = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center">
-                  <div className="bg-yellow-100 p-3 rounded-full mr-4">
-                    <FaWhatsapp className="text-yellow-500 text-xl" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">OnlineJobs.ph</h4>
-                    <a href="https://www.onlinejobs.ph/jobseekers/info/yourprofile" className="text-blue-500 hover:underline">www.onlinejobs.ph/jobseekers/info/4350531</a>
-                  </div>
-                </div>
+             <div className="flex items-center">
+  <div className="bg-yellow-100 p-3 rounded-full mr-4">
+    <IoIosBriefcase  className="text-yellow-500 text-xl" />
+  </div>
+  <div className="min-w-0"> {/* allows shrink inside flex */}
+ <h4 className="font-semibold">OnlineJobs.ph</h4>
+  <a 
+    href="https://www.onlinejobs.ph/jobseekers/info/yourprofile" 
+    className="text-blue-500 hover:underline break-words"
+  >
+    www.onlinejobs.ph/jobseekers/info/4350531
+  </a>
+  </div>
+</div>
                 
                 <div className="flex items-center">
                   <div className="bg-red-100 p-3 rounded-full mr-4">
