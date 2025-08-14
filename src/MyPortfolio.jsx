@@ -4,97 +4,107 @@ import { FaFacebookMessenger, FaWhatsapp, FaEnvelope, FaPlay, FaTimes } from 're
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { IoIosBriefcase } from "react-icons/io";
 
+
 // Sample data for projects
 const localizeVideo = [
   {
-    id: 1,
+    id: 2,
     title: "Localize Video 1",
+    description: "A cinematic storytelling video designed to connect emotionally with the target audience.",
+    thumbnail: "/videot.jpg",
+    videoUrl: "https://drive.google.com/file/d/156M1hLR-bC3K8flsJHLaRpH6VKkuV6Xu/preview"
+  },
+  {
+    id: 3,
+    title: "Localize Video 2",
     description: "A dynamic promotional video tailored for a local product launch.",
     thumbnail: "/videot.jpg",
     videoUrl: "https://drive.google.com/file/d/1lGja_KyxV0zN9WUJq6hZc0cV5wV0Xiwe/preview"
   },
   {
-    id: 2,
-    title: "Localize Video 2",
+    id: 4,
+    title: "Localize Video 3",
     description: "A heartfelt wedding highlight capturing timeless memories.",
     thumbnail: "/videot.jpg",
     videoUrl: "https://drive.google.com/file/d/1cBJ2ZwfqKisw9QwYMjb4qsF9LMVd7BRD/preview"
   },
   {
-    id: 3,
-    title: "Localize Video 3",
+    id: 5,
+    title: "Localize Video 4",
     description: "A sleek corporate video designed to strengthen brand identity.",
     thumbnail: "/videot.jpg",
     videoUrl: "https://drive.google.com/file/d/1iKgJCf8hvCUd0i7oiYjTulz0e-O5ybX6/preview"
   },
   {
-    id: 4,
-    title: "Localize Video 4",
-    description: "A high-impact branding video for corporate presentations.",
-    thumbnail: "/videot.jpg",
-    videoUrl: "https://drive.google.com/file/d/1UhYgHuwewCUznJEIDrzOOsLUK1INVXmK/preview"
-  },
-  {
-    id: 5,
+    id: 7,
     title: "Localize Video 5",
     description: "An engaging company overview video for client and investor use.",
     thumbnail: "/videot.jpg",
     videoUrl: "https://drive.google.com/file/d/1n9VAK5xkzP7zCyxTeVCnTUUVkHHqYxoP/preview"
   },
   {
-    id: 6,
+    id: 8,
     title: "Localize Video 6",
     description: "A polished corporate video for digital marketing campaigns.",
     thumbnail: "/videot.jpg",
     videoUrl: "https://drive.google.com/file/d/1gV3m21yeGrkytxxxYF5Dm5JlQcILikT-/preview"
-  },
+  }
 ];
 
 
+
 const videoCreatives = [
-  {
+    {
     id: 1,
+    title: "AI ADS 1",
+    description: "A dynamic promotional video tailored for a local product launch.",
+    thumbnail: "/images.jpeg",
+    videoUrl: "https://drive.google.com/file/d/1qWuJNAs8ZnQ_hzUskn_XW-r61pQshmoM/preview"
+  },
+  {
+    id: 2,
+    title: "AI ADS 2",
+    description: "A heartfelt wedding highlight capturing timeless memories.",
+    thumbnail: "/images.jpeg",
+    videoUrl: "https://drive.google.com/file/d/1_l_glkH5OmcAZXz3KK1d_mF3j2fI2omk/preview"
+  },
+  {
+    id: 3,
     title: "Creative Video 1",
     description: "A vibrant product commercial designed to boost brand visibility.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1NCJ5BuXDNCREJdZ555xVS7vaS8QupgUZ/preview"
   },
   {
-    id: 2,
+    id: 4,
     title: "Creative Video 2",
     description: "An emotional highlight capturing the essence of a wedding celebration.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1v4ekeplU5kwzG5n0JrdY0m9HKc24qwVr/preview"
   },
   {
-    id: 3,
+    id: 5,
     title: "Creative Video 3",
     description: "A professional corporate video showcasing business values and goals.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1pJL19zSX62Yuhhh3tOnrsS4BOyc67t9Y/preview"
   },
   {
-    id: 4,
+    id: 6,
     title: "Creative Video 4",
     description: "A clean and modern video designed for company branding and outreach.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1W5eUsjzFodElN1G2NFBNbDsZJ2R5hi7K/preview"
   },
   {
-    id: 5,
+    id: 7,
     title: "Creative Video 5",
-    description: "A compelling business video crafted to leave a strong impression.",
+    description: "A captivating story-driven video designed to inspire and connect with your audience.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1KySGvGqSUdZ7cYHyN3qG5zwbWAu_uR_6/preview"
   },
-  {
-    id: 6,
-    title: "Creative Video 6",
-    description: "A promotional video designed to elevate your brand’s professional image.",
-    thumbnail: "/images.jpeg",
-    videoUrl: "https://drive.google.com/file/d/1gV3m21yeGrkytxxxYF5Dm5JlQcILikT-/preview"
-  },
 ];
+
 
 
 const imageProjects = [
@@ -368,8 +378,54 @@ const MyPortfolio = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">My Sample Videos</h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
+          </motion.div>
+
+          
+               {/* Video Projects */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h3 className="text-2xl font-semibold mb-8 text-center">Creative Video ADS</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {videoCreatives.map((project, index) => (
+                <motion.div 
+                  key={project.id}
+                  variants={fadeIn}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-white rounded-xl overflow-hidden shadow-md"
+                >
+                  <div className="relative">
+                    <img 
+                      src={project.thumbnail} 
+                      alt={project.title} 
+                      className="w-full h-48 object-cover"
+                    />
+                    <button 
+                      onClick={() => openModal(project)}
+                      className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30  opacity-100 transition-opacity"
+                    >
+                      <div className="bg-blue-500 text-white p-4 rounded-full">
+                        <FaPlay size={24} />
+                      </div>
+                    </button>
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
+                    {/* <p className="text-gray-600">{project.description}</p> */}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
           
           {/* Video Projects */}
@@ -401,7 +457,7 @@ const MyPortfolio = () => {
                     />
                     <button 
                       onClick={() => openModal(project)}
-                      className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 md:opacity-0 md:hover:opacity-100 opacity-100 transition-opacity"
+                      className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30  opacity-100  transition-opacity"
                     >
                       <div className="bg-blue-500 text-white p-4 rounded-full">
                         <FaPlay size={24} />
@@ -410,57 +466,13 @@ const MyPortfolio = () => {
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
-                    <p className="text-gray-600">{project.description}</p>
+                    {/* <p className="text-gray-600">{project.description}</p> */}
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-               {/* Video Projects */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-16"
-          >
-            <h3 className="text-2xl font-semibold mb-8 text-center">Creative Video ADS</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {videoCreatives.map((project, index) => (
-                <motion.div 
-                  key={project.id}
-                  variants={fadeIn}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white rounded-xl overflow-hidden shadow-md"
-                >
-                  <div className="relative">
-                    <img 
-                      src={project.thumbnail} 
-                      alt={project.title} 
-                      className="w-full h-48 object-cover"
-                    />
-                    <button 
-                      onClick={() => openModal(project)}
-                      className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 md:opacity-0 md:hover:opacity-100 opacity-100 transition-opacity"
-                    >
-                      <div className="bg-blue-500 text-white p-4 rounded-full">
-                        <FaPlay size={24} />
-                      </div>
-                    </button>
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
-                    <p className="text-gray-600">{project.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
           
           {/* Image Projects */}
           {/* <motion.div 
