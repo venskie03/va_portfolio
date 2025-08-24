@@ -54,6 +54,13 @@ const localizeVideo = [
 
 
 const videoCreatives = [
+      {
+    id: 21,
+    title: "UGC 1",
+    description: "",
+    thumbnail: "/images.jpeg",
+    videoUrl: "https://drive.google.com/file/d/1iZPfZLstY4Hemb1sTSuN3-dm_AnErsu8/preview"
+  },
     {
     id: 1,
     title: "AI ADS 1",
