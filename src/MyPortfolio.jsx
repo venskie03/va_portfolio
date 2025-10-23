@@ -54,63 +54,78 @@ const localizeVideo = [
 
 
 const videoCreatives = [
-      {
-    id: 21,
-    title: "UGC 1",
+  {
+    id: 1,
+    title: "Creative Video ADS 1",
+    description: "",
+    thumbnail: "/images.jpeg",
+    videoUrl: "https://drive.google.com/file/d/1BIBgTYWzG9cesGQwiuhuRLavsmqySMfl/preview"
+  },
+  {
+    id: 2,
+    title: "Creative Video ADS 2",
+    description: "",
+    thumbnail: "/images.jpeg",
+    videoUrl: "https://drive.google.com/file/d/1NM-MCs2l0uAxELLq6VADdpCj7Cwvy3Et/preview"
+  },
+  {
+    id: 3,
+    title: "Creative Video ADS 3",
     description: "",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1iZPfZLstY4Hemb1sTSuN3-dm_AnErsu8/preview"
   },
-    {
-    id: 1,
-    title: "AI ADS 1",
+  {
+    id: 4,
+    title: "Creative Video ADS 4",
     description: "A dynamic promotional video tailored for a local product launch.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1qWuJNAs8ZnQ_hzUskn_XW-r61pQshmoM/preview"
   },
   {
-    id: 2,
-    title: "AI ADS 2",
+    id: 5,
+    title: "Creative Video ADS 5",
     description: "A heartfelt wedding highlight capturing timeless memories.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1_l_glkH5OmcAZXz3KK1d_mF3j2fI2omk/preview"
   },
   {
-    id: 3,
-    title: "Creative Video 1",
+    id: 6,
+    title: "Creative Video ADS 6",
     description: "A vibrant product commercial designed to boost brand visibility.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1NCJ5BuXDNCREJdZ555xVS7vaS8QupgUZ/preview"
   },
   {
-    id: 4,
-    title: "Creative Video 2",
+    id: 7,
+    title: "Creative Video ADS 7",
     description: "An emotional highlight capturing the essence of a wedding celebration.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1v4ekeplU5kwzG5n0JrdY0m9HKc24qwVr/preview"
   },
   {
-    id: 5,
-    title: "Creative Video 3",
+    id: 8,
+    title: "Creative Video ADS 8",
     description: "A professional corporate video showcasing business values and goals.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1pJL19zSX62Yuhhh3tOnrsS4BOyc67t9Y/preview"
   },
   {
-    id: 6,
-    title: "Creative Video 4",
+    id: 9,
+    title: "Creative Video ADS 9",
     description: "A clean and modern video designed for company branding and outreach.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1W5eUsjzFodElN1G2NFBNbDsZJ2R5hi7K/preview"
   },
   {
-    id: 7,
-    title: "Creative Video 5",
+    id: 10,
+    title: "Creative Video ADS 10",
     description: "A captivating story-driven video designed to inspire and connect with your audience.",
     thumbnail: "/images.jpeg",
     videoUrl: "https://drive.google.com/file/d/1KySGvGqSUdZ7cYHyN3qG5zwbWAu_uR_6/preview"
   },
 ];
+
 
 
 
@@ -270,7 +285,7 @@ const MyPortfolio = () => {
             >
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-blue-500">
                 <img 
-                  src="/dp.png" 
+                  src="/dp.jpg" 
                   alt="Brigiette Jazha" 
                   className="w-full h-full object-cover"
                 />
